@@ -1,0 +1,45 @@
+#ifndef LOGICSIMULATOR_H
+#define LOGICSIMULATOR_H
+#include "Device.h"
+#include "iPin.h"
+#include "oPin.h"
+#include "gateAND.h"
+#include "gateOR.h"
+#include "gateNOT.h"
+
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+using namespace std;
+
+class LogicSimulator{
+    private:
+        vector<Device*> circuit;
+        vector<iPin*> iPins;
+        vector<Device*> oPins;
+        vector<bool> gate_is_connect;
+
+    public:
+        ~LogicSimulator();
+        vector<bool> getSimulationResult(vector<bool>);
+        vector<vector<bool>> generateAllInput(int size);
+        vector<vector<bool>> getTruthTable();
+
+        Device* GateTable(int index);
+        void initDevice(int input_size, int gate_size);
+        void setGateType(int index, int type);
+        void setGate(int index, string text);
+        void load(string);
+
+        void clearDevice();
+
+        int getiPinSize();
+        int getoPinSize();
+        int getGateSize();
+
+        void getGateType(int index);
+        void getGateiPinSize(int index);
+};
+
+#endif
