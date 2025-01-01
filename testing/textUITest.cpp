@@ -1,9 +1,14 @@
-#include "../src/LogicSimulator.h"
+#include "../src/TextUI.h"
 #include <stdio.h>
 #include <iostream>
 using namespace std;
 
 int main(){
+    TextUI testUI;
+    string path = "../File_1.lcf";
+    testUI.loadFile();
+
+    
     LogicSimulator testCircuit;
     testCircuit.load("../File_1.lcf");
 

@@ -1,0 +1,1 @@
+g++ -o %1 %2 ../src/TextUI.cpp ../src/LogicSimulator.cpp ../src/Device.cpp ../src/iPin.cpp ../src/oPin.cpp ../src/gateAND.cpp ../src/gateNOT.cpp ../src/gateOR.cpp
