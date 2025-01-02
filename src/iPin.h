@@ -8,10 +8,10 @@ class iPin: public Device{
         bool value;
 
     public:
+        void setValue(bool);
         void addInputPin(Device* d) override;
         bool getOutput() override;
-        void setValue(bool);
-        string getType();
+        string getType() override;
 };
 
 #endif

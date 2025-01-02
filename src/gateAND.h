@@ -4,8 +4,8 @@
 
 class gateAND: public Device{
     public:
-        bool getOutput();
-        string getType();
+        bool getOutput() override;
+        string getType() override;
 };
 
 #endif

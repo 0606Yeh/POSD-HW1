@@ -22,7 +22,7 @@ class LogicSimulator{
 
     public:
         ~LogicSimulator();
-        vector<bool> getSimulationResult(vector<bool>);
+        vector<bool> getSimulationResult(vector<bool> input);
         vector<vector<bool>> generateAllInput(int size);
         vector<vector<bool>> getTruthTable();
 
@@ -30,16 +30,17 @@ class LogicSimulator{
         void initDevice(int input_size, int gate_size);
         void setGateType(int index, int type);
         void setGate(int index, string text);
-        void load(string);
+        void load(string path);
 
         void clearDevice();
 
+        // for test
         int getiPinSize();
         int getoPinSize();
         int getGateSize();
 
-        void getGateType(int index);
-        void getGateiPinSize(int index);
+        void printGateType(int index);
+        void printGateiPinSize(int index);
 };
 
 #endif

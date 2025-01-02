@@ -11,7 +11,7 @@ class Device{
         virtual void addInputPin(Device*);
         virtual bool getOutput() = 0;
         virtual string getType() = 0;
-        int getiPinSize(){return iPins.size();}
+        int getiPinSize();
 };
 
 #endif

@@ -133,7 +133,6 @@ vector<vector<bool>> LogicSimulator::generateAllInput(int size){
     for(int i = 0; i < size; i++)
         input.push_back(0);
 
-
     bool end = false;
     while(!end){
         out.push_back(input);
@@ -176,7 +175,7 @@ int LogicSimulator::getGateSize(){
     return circuit.size();
 }
 
-void LogicSimulator::getGateType(int index){
+void LogicSimulator::printGateType(int index){
     if(circuit[index] == nullptr)
         printf("gate isn't set\n");
     else{
@@ -184,7 +183,7 @@ void LogicSimulator::getGateType(int index){
     }
 }
 
-void LogicSimulator::getGateiPinSize(int index){
+void LogicSimulator::printGateiPinSize(int index){
     if(circuit[index] == nullptr)
         printf("gate isn't set\n");
     else{
