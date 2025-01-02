@@ -751,7 +751,7 @@
 											"top": 426,
 											"width": 305.12255859375,
 											"height": 13,
-											"text": "~LogicSimulator()",
+											"text": "+~LogicSimulator()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4549,8 +4549,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGT2cvU7bnk18Y="
 							},
-							"name": "LogicSimulator",
-							"visibility": "package"
+							"name": "~LogicSimulator"
 						},
 						{
 							"_type": "UMLOperation",

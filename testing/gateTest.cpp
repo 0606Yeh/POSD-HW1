@@ -22,12 +22,15 @@ int main(){
         Device* opin = new oPin();
         Device* gate = testCircuit.GateTable(type);
         
-        gate->addInputPin(F_ipin);
-        if(type != 3)
-            gate->addInputPin(T_ipin);
+        gate->addInputPin(T_ipin);
+        if(type != 3)// NOT gate only need one input
+            gate->addInputPin(F_ipin);
         opin->addInputPin(gate);
 
-        printf("%s gate with input 1, 0: %d\n", gate->getType().c_str(), opin->getOutput());
+        if(type != 3)
+            printf("%s gate with input value 1, 0: %d\n", gate->getType().c_str(), opin->getOutput());
+        else
+            printf("%s gate with input value 1: %d\n", gate->getType().c_str(), opin->getOutput());
         
         delete gate;
         delete opin;
