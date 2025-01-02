@@ -4,18 +4,22 @@
 using namespace std;
 
 int main(){
-    TextUI testUI;
-    string path = "../File_1.lcf";
-    testUI.loadFile();
-
+    TextUI textUI;
     
-    LogicSimulator testCircuit;
-    testCircuit.load("../File_1.lcf");
+    printf("Test print menu:\n");
+    textUI.displayMenu();
 
-    printf("Circuit: %d input pins, %d output pins and %d gates\n", 
-            testCircuit.getiPinSize(), testCircuit.getoPinSize(), testCircuit.getGateSize());
+    printf("Test load file:\n");
+    textUI.loadFile();
 
-    for(int gate_num = 0; gate_num < testCircuit.getGateSize(); gate_num++){
-        testCircuit.printGateType(gate_num);
+    printf("Test key in input value:\n");
+    textUI.simulation();
+
+    printf("Test print truth table:\n");
+    textUI.displayTruthTable();
+
+    printf("Test process command:\n");
+    for(int command = 1; command < 5; command++){
+        textUI.processCommand(command);
     }
 }

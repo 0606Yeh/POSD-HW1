@@ -24,6 +24,11 @@ vector<bool> LogicSimulator::getSimulationResult(vector<bool> input){
 }
 
 vector<vector<bool>> LogicSimulator::getTruthTable(){
+    if(iPins.size() == 0){
+        printf("No circuits loaded yet!\n");
+        return vector<vector<bool>>{};
+    }
+
     vector<vector<bool>> allOut;
     
     for(vector<bool> input: generateAllInput(iPins.size()))
@@ -120,6 +125,7 @@ Device* LogicSimulator::GateTable(int index){
         return new gateNOT();
         break;
     default:
+        printf("Error: wrong type of gate!\n");
         return nullptr;
         break;
     }

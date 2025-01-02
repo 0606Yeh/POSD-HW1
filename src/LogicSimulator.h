@@ -22,10 +22,13 @@ class LogicSimulator{
 
     public:
         ~LogicSimulator();
+
+        // for simulation
         vector<bool> getSimulationResult(vector<bool> input);
         vector<vector<bool>> generateAllInput(int size);
         vector<vector<bool>> getTruthTable();
 
+        // for load file
         Device* GateTable(int index);
         void initDevice(int input_size, int gate_size);
         void setGateType(int index, int type);
